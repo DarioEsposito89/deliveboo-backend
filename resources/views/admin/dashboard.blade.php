@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="container">
-    <h2 class="fs-4 text-secondary my-4">
+    <h2 class="fs-4 my-4 gold-text">
         {{ __('Dashboard') }}
     </h2>
     <div class="row justify-content-center">
         <div class="col">
-            <div class="card">
-                <div class="card-header">{{ __('User Dashboard') }}</div>
+            <div class="card gold-text">
+                <div class="card-header login-head">{{ __('User Dashboard') }}</div>
 
-                <div class="card-body">
+                <div class="card-body login-body text-white">
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}

@@ -10,7 +10,6 @@
 
     <title>{{ config('app.name') }}</title>
 
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -29,12 +28,10 @@
     @vite(['resources/js/validation.js'])
 </head>
 
-
-<body>
+<body class="bg-dark">
     <div id="app">
 
-
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
@@ -55,19 +52,19 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
+                            <a class="nav-link gold-text" href="{{url('/') }}">{{ __('Home') }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.plates.index') }}">Piatti</a>
+                            <a class="nav-link gold-text" href="{{ route('admin.plates.index') }}">Piatti</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.orders.index') }}">Riepilogo Ordini</a>
+                            <a class="nav-link gold-text" href="{{ route('admin.orders.index') }}">Riepilogo Ordini</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.stats.index') }}">Statistiche</a>
+                            <a class="nav-link gold-text" href="{{ route('admin.stats.index') }}">Statistiche</a>
                         </li>
                     </ul>
 
@@ -76,24 +73,24 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link gold-text" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link gold-text" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                         @endif
                         @else
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown gold-text">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url('dashboard') }}">{{__('Dashboard')}}</a>
-                                <a class="dropdown-item" href="{{ url('admin/profile') }}">{{__('Profile')}}</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                            <div class="dropdown-menu dropdown-menu-right gold-text" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item gold-text" href="{{ url('dashboard') }}">{{__('Dashboard')}}</a>
+                                <a class="dropdown-item gold-text" href="{{ url('admin/profile') }}">{{__('Profile')}}</a>
+                                <a class="dropdown-item gold-text" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -115,3 +112,5 @@
 </body>
 
 </html>
+
+

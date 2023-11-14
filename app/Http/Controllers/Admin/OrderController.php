@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class OrderController extends Controller
 {
@@ -26,6 +27,7 @@ class OrderController extends Controller
             ->select('orders.*') // Seleziona tutti i campi di orders
             ->distinct()
             ->get();
+            @dd($orders);
 
         return view('admin.orders.index', compact('orders'));
     }

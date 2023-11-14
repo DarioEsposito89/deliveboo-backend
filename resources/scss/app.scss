@@ -2,7 +2,171 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import './partials/variables';
 
-.btn-aggiungi a {
+:root{
+    --bs-border-color-translucent:rgb(89, 89, 89);
+
+}
+
+a{
     text-decoration: none;
-    color: white;
+    color: $bg_color;
+}
+
+/* Stile per i link nella barra di navigazione */
+.navbar-nav a.nav-link {
+    color: $gold_text; 
+}
+
+/* Effetto hover per i link */
+.navbar-nav a.nav-link:hover {
+    color: #dfc203; /* Colore del testo giallo al passaggio del mouse */
+}
+
+/* Colore del testo dell'utente quando il dropdown è aperto */
+#navbarDropdown:focus {
+    color: #dfc203; 
+}
+
+/* Colore di sfondo grigio per la card del dropdown */
+.dropdown-menu {
+    background-color: rgb(51, 51, 51); 
+}
+
+/* Stile per il link utente nel dropdown */
+.dropdown-menu a {
+    color: $gold_text; 
+}
+
+/* Effetto hover per il link utente nel dropdown */
+.dropdown-menu a:hover {
+    background-color: $bg_color; 
+    color: $gold_text; 
+}
+
+.alert-danger{
+    color: $bg_color;
+    background-color: $gold_text;
+}
+
+// Stile Bottone
+.my-button{
+    background-color: $gold_text;
+    border-radius: 0;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    &:hover{
+        color:$gold-text;
+        background-color: $bg_color;
+        border-color: $gold-text;
+    }
+} 
+
+// Stile Bottone secondario
+.my-button-secondary{
+    background-color: white;
+    color: $bg_color;
+    border-radius: 0;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    &:hover{
+        color:$gold-text;
+        background-color: $bg_color;
+        border-color: $gold-text;
+    }
+}
+
+// Stile Bottone piccolo
+.my-button-small{
+    background-color: $gold_text;
+    color: $bg_color;
+    border-radius: 0;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+
+    &:hover{
+        color:$gold-text;
+        background-color: $bg_color;
+        border-color: $gold-text;
+    }
+}
+
+// Stile Bottone secondario piccolo
+.my-button-secondary-small{
+    background-color: white;
+    color: $bg_color;
+    border-radius: 0;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+
+    &:hover{
+        color:$gold-text;
+        background-color: $bg_color;
+        border-color: $gold-text;
+    }
+}
+
+.btn-aggiungi:hover a {
+    color: $gold-text;
+}
+
+.gold-text{
+    color: $gold_text;
+}
+
+.bg-dark{
+    background-color: $bg_color;
+}
+
+.login-head{
+    background-color: rgb(70, 70, 70);;
+}
+
+.login-body{
+    background-color: rgb(51, 51, 51);;
+}
+
+#input:focus{
+    border-color: $gold_text ;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Colora le checkbox di giallo quando sono selezionate */
+input[type="checkbox"]:checked {
+    background-color: $gold-text; 
+}
+
+/* Radio button selezionati */
+.form-check-input:checked {
+    background-color: #dfc203;
+    border-color: $gold-text;
+}
+
+/* Rimuovi i bordi dalla card del form */
+.card {
+    border: none;
+    border-radius: 0.50rem 0.25rem 0 0;
+    box-shadow: none; 
+}
+
+.card img {
+    height: 100%;
+    width: 100%; 
+    object-fit: cover; 
+}
+
+.card-head {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.navbar-toggler-icon {
+    background-color: $gold-text;
+    border: 2px solid white;
 }
